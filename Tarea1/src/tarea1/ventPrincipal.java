@@ -38,7 +38,8 @@ public class ventPrincipal extends javax.swing.JFrame {
         initComponents();
         JTableHeader header = table1.getTableHeader();
         header.setBackground(Color.decode("#23272a"));
-        header.setForeground(Color.white);        
+        header.setForeground(Color.white);  
+        btnNext.setEnabled(false);
     }
 
     /**
@@ -244,7 +245,8 @@ public class ventPrincipal extends javax.swing.JFrame {
         }        
         else{
             table1.setRowSelectionInterval(index, index);
-            JOptionPane.showMessageDialog(null, "Está en el ultimo !");
+            JOptionPane.showMessageDialog(null, "Está en el ultimo ! \n Para ver otro ejemplo cargue otro archivo");
+            btnNext.setEnabled(false);
         }        
         if(array2[0].equals("MOV")){
             if(array2[1].equals("AX")){
@@ -314,6 +316,7 @@ public class ventPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+        btnNext.setEnabled(true);
         index = 0;
         globalContent=null;
         globalContentBinary=null;

@@ -29,6 +29,7 @@ import javax.swing.table.JTableHeader;
  * @author Akuseru
  */
 public class ventPrincipal extends javax.swing.JFrame {
+    //Global variables for the content in its natural and binary forms.
     List<String[]> globalContent = new ArrayList<String[]>();
     List<String[]> globalContentBinary = new ArrayList<String[]>();
     /**
@@ -229,8 +230,14 @@ public class ventPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    //Actual index of table in program.
     int index = 0;
     int size=0;
+    /**
+     * This function is the action for the Next Button, it changes the values on screen according to the operation made.
+     * @param evt 
+     * Returns data on screen.
+     */
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         
         String[] array2 = globalContent.get(index);
@@ -314,7 +321,12 @@ public class ventPrincipal extends javax.swing.JFrame {
             } 
         }
     }//GEN-LAST:event_btnNextActionPerformed
-
+    /**
+     * This function is the load event basically.
+     * It calls the necessary file chooser and the other elements to read an asm file.
+     * It will use the class Data to parse the content to binary.
+     * @param evt 
+     */
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
         btnNext.setEnabled(true);
         index = 0;

@@ -16,6 +16,11 @@ import java.util.Random;
  * @author Akuseru
  */
 public class Data{
+    /**
+     * This function gets a integer number and returns a complete 8 bit signed binary number.
+     * @param number
+     * @return String with a complete binary number. 
+     */
     private String changeBinary(int number){
         String binaryNum = "";
         int flag = 0;
@@ -33,7 +38,11 @@ public class Data{
         return binaryNum;
     }
     
-    
+    /**
+     * This function receives a list of string arrays that has the content of a asm file in it.
+     * @param content
+     * @return A list of string arrays with the binary equivalent of the content in the asm file.
+     */
     public List<String[]> transformCode(List<String[]> content){
         List<String[]> processedContent = new ArrayList<String[]>();
         Random rand = new Random();

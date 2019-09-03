@@ -37,7 +37,7 @@ public class Data{
     public List<String[]> transformCode(List<String[]> content){
         List<String[]> processedContent = new ArrayList<String[]>();
         Random rand = new Random();
-        int n = rand.nextInt((100-(processedContent.size()))+1);
+        int n = rand.nextInt((89)+1);
         for(int i=0;i<content.size();i++){
             String[] line = new String[4];
             String[] array = content.get(i);

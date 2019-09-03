@@ -231,10 +231,11 @@ public class ventPrincipal extends javax.swing.JFrame {
     int index = 0;
     int size=0;
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        String[] array = globalContentBinary.get(index); 
+        
         String[] array2 = globalContent.get(index);
         
         if(index<size-1){
+            String[] array = globalContentBinary.get(index+1); 
             table1.setRowSelectionInterval(index, index);
             index +=1;
             lblPC.setText(table1.getValueAt(table1.getSelectedRow()+1,0).toString());
@@ -314,6 +315,8 @@ public class ventPrincipal extends javax.swing.JFrame {
 
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
         index = 0;
+        globalContent=null;
+        globalContentBinary=null;
         JFileChooser fileChooser = new JFileChooser();
         FileFilter filter = new FileNameExtensionFilter("ASM Files","asm");
         fileChooser.setFileFilter(filter);
@@ -353,6 +356,8 @@ public class ventPrincipal extends javax.swing.JFrame {
         lblAX.setText("0");
         lblBX.setText("0");
         lblCX.setText("0");
+        lblPC.setText("0");
+        lblIR.setText("----------------------------------");
     }//GEN-LAST:event_btnLoadActionPerformed
 
     /**
